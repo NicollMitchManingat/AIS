@@ -15,7 +15,7 @@ const authHandler = async(req, res, next) =>{
     try{
         const {id} = jwt.verify(token, process.env.SECRET);
         const [user] = await UserModel.getUser(id);
-        //req.user = user.id;
+        req.user = user.id;
 
         next();
     }catch(err){

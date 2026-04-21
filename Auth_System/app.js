@@ -2,11 +2,12 @@ import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import express from 'express';
 import cookieParser from 'cookie-parser';
+import 'dotenv/config';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import pool from './Config/db.js';
 
-dotenv.config();
+//dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
